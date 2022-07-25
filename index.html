@@ -17,15 +17,23 @@
         <div class="container mt-3 d-flex justify-content-center">
             <div class="row">
 
-                <div class="col-12">
+                <h1 class="text-center mb-5 fw-bold">Todo List</h1>
+                <div class="col-12 text-center">
                     <label for="list1">Programma Giornaliero</label>
-                    <input type="text" v-model="list1" id="list1">
-                    <button class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i></button>
+                    <input type="text" @keyup.enter="addLista" v-model="newLista" id="list1">
+                    <button @click="addList()" class="btn btn-primary">
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </button>
                 </div>
 
                 <div class="col-12 mt-5">
                     <ul>
-                        <li></li>
+                        <li class="d-flex bg-warning justify-content-between py-3 my-3" v-for="(list, index) in lista" :class="list.done?'text-decoration': ''">
+                            <span >{{list.text}}</span>
+                            <span @click="removeList(index)">
+                                <i class="fa-solid fa-trash cursor"></i>
+                            </span>
+                        </li>
                     </ul>
                 </div>
 
