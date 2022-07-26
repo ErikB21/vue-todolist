@@ -4,14 +4,6 @@
     padding: 0;
 }
 
-.text-decoration{
-    text-decoration: line-through;
-}
-
-.text-decoration-none{
-    text-decoration:none;
-}
-
 .cursor{
     cursor: pointer;
 }

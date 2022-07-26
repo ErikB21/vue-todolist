@@ -28,8 +28,8 @@
 
                 <div class="col-12 mt-5">
                     <ul>                                                                                    <!--aggiunge la classe con line-trough impostata-->
-                        <li class="d-flex bg-warning justify-content-between py-3 my-3" v-for="(list, index) in lista" :class="(list.done == false)?'text-decoration': 'text-decoration-none'">
-                            <span>{{list.text}}</span>
+                        <li class="d-flex bg-warning justify-content-between py-3 my-3" v-for="(list, index) in lista">
+                            <span v-bind:class="(list.done)?'text-decoration-line-through':''">{{list.text}}</span>
                             <span @click="removeList(index)">
                                 <i class="fa-solid fa-trash cursor"></i>
                             </span>
