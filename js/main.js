@@ -62,7 +62,7 @@ const day = new Vue(
                 // }else{
                 //     this.lista[index].done== false;
                 // }
-                this.lista[index].done = !this.lista[index].done;
+                this.lista[index].done = !this.lista[index].done;//al click se è vera diventa falsa e se è falsa diventa vera
             }
         }
     }
