@@ -54,6 +54,15 @@ const day = new Vue(
             // usato per rimuovere un li dal DOM
             removeList(index){
                 this.lista.splice(index, 1)
+            },
+
+            toggleList(index){
+                // if(this.lista[index].done== false){
+                //     this.lista[index].done = true;
+                // }else{
+                //     this.lista[index].done== false;
+                // }
+                this.lista[index].done = !this.lista[index].done;
             }
         }
     }
